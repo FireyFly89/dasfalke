@@ -1,0 +1,21 @@
+.breadcrumbs{
+  @include clearfix();
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+
+  > li{
+    float: left;
+    font-size: 12px;
+
+    a{
+      color: $color__grey__2;
+      text-decoration: none;
+    }
+
+    &.separator{
+      padding: 0 8px;
+      color: $color__grey__6;
+    }
+  }
+}

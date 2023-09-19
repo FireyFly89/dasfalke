@@ -1,0 +1,103 @@
+@import "../mixins";
+@import "../vars";
+
+@import "../modules/falke-searchbar";
+@import "../modules/featured-slider";
+@import "../modules/featured-list";
+@import "../modules/job-list";
+@import "../modules/post-navigation";
+
+.filter__search{
+  position: relative;
+  z-index: 250;
+}
+
+.filter__search-push{
+  @media (min-width: $screen-md-min){
+    padding-left: 330px;
+    width: 100%;
+  }
+}
+
+.filter__search-title{
+  margin: 20px 0 10px 0;
+  font-size: 18px;
+  color: $color__grey__2;
+}
+
+.filter__search-detailed{
+  padding: 20px 0 0 0;
+
+  @media (min-width: $screen-md-min){
+    display: none;
+  }
+}
+
+.featured-jobs{
+  margin: 20px 0;
+}
+
+.filter__options-block{
+  position: relative;
+
+  + .filter__options-block{
+    margin: 30px 0 0 0;
+    padding: 20px 0 0 0;
+
+    &:before{
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 10%;
+      right: 10%;
+      height: 1px;
+      background: #ECF0F5;
+    }
+  }
+}
+
+.filter__options-head{
+  padding: 0 2px 0 2px;
+  margin: 20px 0 20px 0;
+  @include clearfix();
+
+  @media (min-width: $screen-md-min){
+    padding: 0 20px 0 2px;
+  }
+}
+
+.filter__options-left{
+  float: left;
+}
+
+.filter__options-right{
+  float: right;
+}
+
+.filter__options-name,
+.filter__options-reset{
+  font-size: 14px;
+  margin: 0;
+}
+
+.filter__options-name{
+  color: darken($color__grey, 20%);
+}
+
+.filter__options-reset{
+  text-transform: uppercase;
+  color: $color__grey;
+}
+
+// Alert
+.alerts__note{
+  padding: 10px 20px 20px 20px;
+  color: $color__grey__5;
+  font-size: 14px;
+}
+
+.alerts__trigger{
+  @media (min-width: $screen-md-min){
+    padding: 0 20px 0 0;
+  }
+}

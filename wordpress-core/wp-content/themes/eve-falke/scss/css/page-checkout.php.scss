@@ -1,0 +1,59 @@
+@import "../mixins";
+@import "../vars";
+
+@import "../plugins/woocommerce";
+
+.entry-title{
+  font-size: 22px;
+  margin: 0 0 20px 0;
+}
+
+ul.wc_payment_methods{
+
+  li.wc_payment_method{
+    padding: 0 0 0 30px;
+    margin: 0 0 15px 0!important;
+    position: relative;
+
+    label{
+      display: block;
+    }
+
+    .input-radio{
+      position: absolute;
+      margin: 0;
+      top: 6px;
+      left: 0;
+    }
+
+    img{
+      height: 40px;
+      width: auto;
+      margin: 0!important;
+    }
+
+    &.payment_method_wirecard_ee_creditcard img{
+      margin: 0 -22px!important;
+    }
+
+    &.payment_method_wirecard_ee_sofortbanking img{
+      margin: 0 -15px!important;
+    }
+  }
+}
+
+.woocommerce-form-coupon-toggle{
+  margin: 0 0 40px 0;
+}
+
+.checkout_coupon{
+  margin: 0 0 40px 0;
+  
+  .form-row{
+    
+    .button{
+      width: 100%;
+      display: block;
+    }
+  }
+}

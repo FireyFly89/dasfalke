@@ -1,0 +1,31 @@
+.navigation{
+  margin: 20px 0 0 0;
+
+  .nav-links{
+    @include clearfix();
+
+    a{
+      text-transform: uppercase;
+      color: $color__grey__5;
+      font-size: 12px;
+      display: inline-block;
+      -webkit-border-radius: 14px;
+      border-radius: 14px;
+      padding: 5px 10px;
+      border: 2px solid $color__grey__5;
+
+      &:hover{
+        color: $color__dark;
+        border-color: $color__dark;
+      }
+    }
+  }
+
+  .nav-previous{
+    float: left;
+  }
+
+  .nav-next{
+    float: right;
+  }
+}

@@ -1,0 +1,52 @@
+{
+    "name": "dasfalke-projects/wordpress",
+    "description": "Dasfalke WordPress",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Krisztian Lakatos",
+            "email": "realfireyfly@gmail.com",
+            "role": "Lead Developer"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "package",
+            "package": {
+                "type": "webroot",
+                "name": "wordpress/wordpress",
+                "version": "5.0.3",
+                "dist": {
+                    "url": "https://wordpress.org/wordpress-5.0.3.zip",
+                    "type": "zip"
+                },
+                "require": {
+                    "fancyguy/webroot-installer": "1.*"
+                }
+            }
+        },
+        {
+            "type": "composer",
+            "url": "https://wpackagist.org"
+        }
+    ],
+    "require": {
+        "php": ">=7.2",
+        "wordpress/wordpress": "5.0.3",
+        "wp-cli/wp-cli": "2.1.0",
+        "vlucas/phpdotenv": "~2.2"
+    },
+    "license": "proprietary",
+	"extra": {
+        "installer-paths": {
+            "plugins/{$name}/": [
+                "type:wordpress-plugin"
+            ],
+            "themes/{$name}/": [
+                "type:wordpress-theme"
+            ]
+        },
+        "webroot-dir": "wordpress-core",
+        "webroot-package": "wordpress/wordpress"
+    }
+}

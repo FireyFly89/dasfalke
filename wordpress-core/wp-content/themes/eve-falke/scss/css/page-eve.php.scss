@@ -1,0 +1,213 @@
+@import "../mixins";
+@import "../vars";
+
+@import "../modules/featured-slider";
+@import "../modules/falke-searchbar";
+@import "../modules/job-list";
+
+body{
+  // background-image: url( $template__baseurl + 'wp-content/themes/' + $template__name + '/img/grey-pattern.png' );
+  // background-position: center center;
+}
+
+.hhero{
+  position: relative;
+  overflow: hidden;
+  padding: 80px 0 100px 0;
+  color: #fff;
+}
+
+.hhero__title{
+  font-size: 1.4em;
+  text-align: center;
+  margin: 0 auto;
+  max-width: 500px;
+}
+
+.hhero__searchbar{
+  max-width: 880px;
+  margin: 40px auto 0 auto;
+}
+
+.hhero__bg{
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: $color__bg__dark;
+
+  > div{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+.hhero__bg-plain{
+  z-index: 5;
+  background: $color__bg__dark;
+}
+
+.hhero__bg-vignette{
+  z-index: 8;
+  background: rgba(#1b1d1f, 0.5);
+}
+
+.hhero__bg-img{
+  z-index: 5;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  opacity: 0;
+  -webkit-transition: opacity 0.6s linear 1s;
+  transition: opacity 0.6s linear 1s;
+
+  &.active{
+    opacity: 1;
+  }
+}
+
+.hhero__content {
+  position: relative;
+  overflow: hidden;
+}
+
+.section-hero {
+
+  h1,h2 {
+    font-size: 21px;
+    font-weight: 600;
+    line-height: 25px;
+    color: black;
+    margin: 0 0 25px 0;
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 19px;
+    color: $color__dark;
+  }
+
+  .hero-header {
+    width: 100%;
+
+    @media (min-width: $screen-md-min){
+      padding-left: 40px;
+      width: 60%;
+    }
+
+    &.right {
+      margin-left: auto;
+      padding: 60px 0;
+      
+      @media (min-width: $screen-md-min){
+        padding: 60px 0 40px 40px;
+      }
+    }
+
+    &.center {
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+    }
+  }
+
+  .hero-content {
+    
+    @media (min-width: $screen-md-min){   
+      @include flexbox;
+      flex-wrap: wrap;
+    }
+
+    .col-left {
+      flex: 0 0 100%;
+      max-width: 100%;
+      padding: 0 0 80px 0;
+
+      @media (min-width: $screen-md-min){
+        flex: 0 0 40%;
+        max-width: 40%;
+        padding-right: 65px;
+        text-align: right;
+        position: relative;
+        
+        &:before {
+          content: '';
+          position: absolute;
+          z-index: 50;
+          top: -9999px;
+          right: 0;
+          bottom: -9999px;
+          left: -9999px;
+          background-color: #fafafa;
+          // background-image: url( $template__baseurl + 'wp-content/themes/' + $template__name + '/img/white-pattern.png' );
+          // background-position: center center;
+        }
+      }
+    }
+
+    .col-right{
+      padding: 30px 15px 30px 15px;
+      margin: 0 -15px;
+      background-color: #fafafa;
+      width: auto;
+      
+      @media (min-width: $screen-md-min) {
+        flex: 0 0 60%;
+        max-width: 60%;
+        margin: 0;
+        background-color: transparent;
+        padding: 0 0 40px 40px;
+
+        @include flexbox();
+
+        .featured-jobs{
+          align-self: flex-end;
+          width: 100%;
+        }
+      } 
+    }
+
+    .btn-wrap{
+      margin-top: 40px;
+
+      a{
+        margin: 0 0 20px 20px;
+
+        @media (max-width: $screen-md-max){
+          display: block;
+          width: 100%;
+          margin: 20px 0 0 0;
+        }
+      }
+    }
+  }
+}
+
+.col-left__psn{
+  position: relative;
+  z-index: 100;
+}
+
+.hhero__featured{
+  padding: 20px 0;
+  background-color: #fafafa;
+
+  .job-list__item{
+    margin: 10px 0;
+  }
+}
+
+.hhero__featured-title{
+  margin: 0 0 10px 0;
+  line-height: 1;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 0 2px;
+  color: #959FAA;
+}

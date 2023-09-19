@@ -1,0 +1,155 @@
+.job-list__items{
+  &.featured {
+    margin-bottom: 10px;
+  }
+}
+
+.job-list__item {
+  background: #fff;
+
+  + .job-list__item{
+    margin: 10px 0 0 0;
+  }
+
+  &.highlighted {
+    border: 2px solid $color__yellow;
+  }
+}
+
+.active-job-list,
+.inactive-job-list {
+  margin: 0;
+
+  .buy-job-package-wrapper {
+    margin-bottom: 25px;
+  }
+
+  .profile-edit-wrapper {
+    margin-bottom: 25px;
+  }
+
+  h2 {
+    font-size: 18px;
+    color: $color__dark;
+    margin: 0 0 15px;
+  }
+
+  &-item {
+    border: 2px solid $color__grey__3;
+    border-radius: 6px;
+    padding: 15px;
+
+    .footer {
+      @include flexbox();
+      justify-content: space-between;
+
+      span {
+        color: $color__grey__6;
+        font-size: 14px;
+      }
+
+      a {
+        text-transform: uppercase;
+        font-size: 12px;
+        font-weight: 700;
+        color: $color__eve;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+// .active-job-list-item,
+// .inactive-job-list-item {
+//   display: flex;
+//   flex-direction: column;
+//   margin-bottom: 20px;
+// }
+
+.job-count-wrapper {
+  display: flex;
+  margin-bottom: 10px;
+
+  .job-count-title{
+    flex: 1 0 auto;
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+  .job-count {
+    flex: 0 1 auto;
+    font-style: oblique;
+    font-size: 18px;
+  }
+}
+
+.list-title {
+  margin-bottom: 15px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.job-list__header{
+  position: relative;
+  @include clearfix();
+  padding: 0 75px 0 0;
+}
+
+.job-list__header-title{
+  font-size: 20px;
+  color: $color__eve;
+  margin: 0;
+}
+
+.job-list__header-title-uri{
+  color: inherit;
+}
+
+.job-list__header-subtitles{
+  display: block;
+  font-size: 14px;
+  color: $color__grey__2;
+  margin: 10px 0 0 0;
+}
+
+.job-list__header-subtitle{
+
+}
+
+.job-list__header-divider{
+  display: inline-block;
+  height: 7px;
+  width: 7px;
+  background-color: $color__grey__2;
+  border-radius: 50%;
+  margin: 0 5px;
+}
+
+.job-list__header-avatar{
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 60px;
+  height: 60px;
+  box-shadow: 0 2px 10px $color__grey__3;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+  font-size: 0;
+}
+
+.job-list__header-avatar-img{
+  width: inherit;
+  height: inherit;
+}
+
+.job-list__content{
+  @include clearfix();
+  padding: 0 75px 0 0;
+
+  p {
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 500;
+    color: $color__dark;
+  }
+}

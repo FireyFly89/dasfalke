@@ -1,0 +1,15 @@
+{
+  "fields": [
+    "Keine abgeschlossene Ausbildung / Pflichtschule",
+    "Kurs",
+    "Lehre",
+    "Lehre mit Meisterprüfung",
+    "Fachschule",
+    "Allgemeinbildende höhere Schule",
+    "Berufsbildende höhere Schule",
+    "Akademie",
+    "Fachhochschule",
+    "Universität",
+    "Universität/Fachhochschule/Akademie"
+	]
+}

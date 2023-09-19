@@ -1,0 +1,25 @@
+.widget-area{
+  padding: 0 20px 0 0;
+}
+
+.widget{
+
+  ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  ~ .widget{
+    margin-top: 20px;
+  }
+}
+
+.widget-title{
+  font-size: 12px;
+  text-transform: uppercase;
+  color: $color__grey__2;
+  margin: 0 0 5px 0;
+}
+
+@import "searchform";

@@ -1,0 +1,390 @@
+@import "../mixins";
+@import "../vars";
+
+@import "../modules/job-list";
+@import "../modules/profiles";
+@import "../modules/profile-image";
+
+.profile__title{
+  font-size: 18px;
+  color: #2F343C;
+  margin: 0 0 15px;
+}
+
+.profile__subtitle{
+  font-size: 14px;
+  color: $color__grey__5;
+  margin: 0 0 15px;
+  text-transform: uppercase;
+}
+
+.profile__nav-list{
+  text-align: left;
+  background: white;
+  margin: 20px -20px 30px -20px;
+  -webkit-border-radius: 12px;
+  border-radius: 12px;
+  
+  @media (min-width: $screen-sm-min){
+    -webkit-border-radius: 0;    
+    border-radius: 0;    
+    -webkit-border-top-left-radius: 12px;
+    border-top-left-radius: 12px;
+    -webkit-border-bottom-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+  }
+
+  nav{
+    padding: 5px 0;
+  }
+
+  ul{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+    li{
+      + li{
+        border-top: 1px solid $color__grey__3;
+      }
+      
+      a{
+        padding: 14px 20px;
+        display: block;
+        color: $color__grey__5;
+        
+      }
+
+      &.is-active a{
+        color: $color__eve;
+      }
+    }
+  }
+}
+
+.faq-list {
+  margin-top: 45px;
+
+  &-item {
+    margin-bottom: 20px;
+
+    h3 {
+      font-size: 16px;
+      line-height: 19px;
+      margin: 0 0 10px;
+    }
+
+    p {
+      font-size: 14px;
+      color: $color__grey__2;
+      line-height: 24px;
+      margin: 0;
+    }
+  }
+}
+
+aside {
+  a {
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 12px;
+  }
+
+  .aside-footer {
+    padding: 0 15px;
+
+    .df-btn {
+      width: 100%;
+      text-align: center;
+    }
+  
+    p {
+      font-size: 14px;
+  
+      em {
+        color: $color__grey__2;
+        font-style: normal;
+      }
+    }
+  }
+
+  .add-job-list {
+    a {
+      margin-left: 15px;
+    }
+
+    h4 {
+      color: $color__grey;
+      font-size: 14px;
+      margin-left: 15px;
+      margin-top: 200px;
+    }
+  }
+}
+
+// Job list for dashboard
+.job-list__item{
+  margin: 0 0 20px 0;
+}
+
+.job-list__item-title{
+  font-size: 18px;
+  color: $color__eve;
+  margin: 0;
+
+  a{
+    color: inherit;
+  }
+}
+
+.job-list__item-subtitle{
+  margin: 5px 0 0 0;
+  color: $color__grey;
+  line-height: 1;
+}
+
+.job-list__item-status-wrp{
+  @include clearfix();
+  padding: 10px 0 0 0; 
+
+  > .df-btn{
+    float: left;
+    margin: 0 10px 10px 0;
+  }
+}
+
+.job-list__item-status-label{
+  flex: 1 0 50%;
+}
+
+.job-list__item-status {
+  flex: 1 0 0;
+
+  &.unused span,
+  &.expired span,
+  &.waiting-for-admin-check span {
+    color: $color__yellow;
+  }
+
+  &.active span {
+    color: $green;
+  }
+
+  &.inactive span,
+  &.unpaid span {
+    color: $red;
+  }
+}
+
+.job-list__item-footer{
+  position: relative;
+}
+
+.job-list__item-info-title{
+  font-size: 12px;
+  text-transform: uppercase;
+  margin: 0 0 5px 0;
+}
+
+.job-list__item-info-wrapper{
+  position: relative;
+  margin: 10px 0 0 0;
+  padding: 10px 0 0 0;
+
+  &::after{
+    content: '';
+    position: absolute;
+    top: -1px;
+    height: 1px;
+    left: -15px;
+    right: -15px;
+    background: #ECF0F5;
+  }
+}
+
+.job-list__item-info-features{
+  @include clearfix();
+
+  @media (min-width: $screen-sm-min){
+    @include flexbox();
+    margin: 0 0 -10px 0;
+  }
+}
+
+.job-list__item-info-feature{
+  font-size: 12px;
+  line-height: 1.2;
+  margin: 0 0 10px 0;
+
+  @media (min-width: $screen-sm-min){
+    @include flex(1 1 0);
+    padding: 0 10px;
+    margin: 0;
+  }
+
+  .meta-title{
+    font-weight: $dffbold;
+    margin: 0 0 5px 0;
+  }
+
+  .meta-time{
+    color: $color__grey;
+    margin: 0 0 5px 0;
+  }
+
+  .feature-status{
+    color: $color__grey;
+  }
+}
+
+.job-list__item-features{
+  @include clearfix();
+  margin: 0 0 -8px 0;
+}
+
+.job-list__item-feature{
+  padding: 7px 15px;
+  line-height: 1;
+  border: 2px solid #ECF0F5;
+  -webkit-border-radius: 12px;
+  border-radius: 12px;
+  margin: 0 8px 8px 0;
+  font-size: 12px;
+  line-height: 1.3;
+  color: #464a50;
+  text-transform: uppercase;
+
+  &.active{
+    border-color: $color__as__bg;
+  }
+}
+
+// Feature option
+.job-page__advopts{
+  text-align: center;
+  position: relative;
+  padding: 20px;
+  background: #fff;
+  border: 2px solid #ECF0F5;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+
+  @media (min-width: $screen-sm-min){
+    margin: 0 20px 0 0;
+  }
+}
+
+.job-page__advopt-action{
+  margin: 20px 0 0 0;
+}
+
+.job-page__advopt-title{
+  font-size: 16px;
+  font-weight: $dffbold;
+  color: #333;
+  margin: 0 0 10px 0;
+}
+
+.job-page__advopt-desc{
+  font-size: 14px;
+  color: #959FAA;
+}
+
+.job-page__advopt-icon{
+  padding: 20px 0;
+
+  > img{
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+.job-page__advopt-price{
+  font-size: 18px;
+  font-weight: $dffbold;
+  padding: 8px 0;
+  color: #333;
+}
+
+.job-page__advopt-timeframe{
+  font-size: 14px;
+  font-weight: $dffbold;
+  color: #959FAA;
+}
+
+.job-page__advopt-option-sep{
+  height: 1px;
+  background: #ECF0F5;
+  margin: 8px 0;
+}
+
+// Jobseeker alerts
+.job-alert-elem{
+  border: 2px solid #ECF0F5;
+  border-radius: 6px;
+  padding: 15px;
+  margin: 0 0 20px 0;
+  background: #fff;
+}
+.job-alert-elem__num{
+  font-size: 18px;
+  font-weight: $dffbold;
+  color: $color__grey__2;
+  margin: 0 0 15px 0;
+  line-height: 1;
+}
+
+.job-alert-elem__keys{
+  @include clearfix();
+  margin: 0 0 10px 0;
+}
+
+.job-alert-elem__key{
+  float: left;
+  padding: 7px 15px;
+  line-height: 1;
+  border: 2px solid #ECF0F5;
+  font-weight: bold;
+  -webkit-border-radius: 12px;
+  border-radius: 12px;
+  margin: 0 8px 8px 0;
+  font-size: 13px;
+  text-transform: uppercase;
+}
+
+.profile-edit__completeness{
+  padding: 15px 15px 15px 80px;
+  border: 2px solid #ecf0f4;
+  border-radius: 6px;
+  position: relative;
+
+  .i{
+    position: absolute;
+    top: 11px;
+    left: 15px;
+    width: 50px;
+    height: 50px;
+    fill: $color__grey__2;
+  }
+}
+
+.profile-edit__completeness-dsc{
+  margin: 0 0 5px 0;
+}
+
+.profile-edit__action{
+  font-weight: $dffbold;
+  font-size: 12px;
+  padding: 10px 0;
+  text-transform: uppercase;
+  color: $color__eve;
+}
+
+.entry-content{
+
+  h2{
+    font-size: 18px;
+    color: #2F343C;
+    margin: 0 0 15px;
+  }
+}

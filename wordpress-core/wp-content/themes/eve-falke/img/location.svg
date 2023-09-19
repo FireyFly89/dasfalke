@@ -1,0 +1,10 @@
+<svg id="Réteg_1" data-name="Réteg 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+  <defs>
+    <style>
+      .location{fill:#c0ccd9;}
+    </style>
+  </defs>
+  <g id="Group">
+    <path id="Oval_163" data-name="Oval 163" class="location" d="M769,1029.92a6,6,0,0,0,4.92-4.92H771v-2h2.92a6,6,0,0,0-4.92-4.92V1021h-2v-2.92a6,6,0,0,0-4.92,4.92H765v2h-2.92a6,6,0,0,0,4.92,4.92V1027h2Zm-1,2.08a8,8,0,1,1,8-8A8,8,0,0,1,768,1032Z" transform="translate(-760 -1016)"/>
+  </g>
+</svg>

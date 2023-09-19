@@ -1,0 +1,57 @@
+@import "../mixins";
+@import "../vars";
+
+@import "../modules/featured-slider";
+@import "../modules/featured-list";
+@import "../modules/job-list";
+@import "../modules/post-navigation";
+@import "../modules/profiles";
+
+.featured-jobs{
+  margin: 20px 0;
+}
+
+.author-top__push{
+  @media (min-width: $screen-md-min){
+    padding-left: 330px;
+    width: 100%;
+  }
+}
+
+.author-top__title{
+  margin: 20px 0 20px 0;
+  font-size: 18px;
+  color: $color__grey__2;
+}
+
+.author-content__title{
+  margin: 0 0 20px 0;
+  font-size: 18px;
+  color: $color__grey__2;
+}
+
+.author-content__wrp{
+  @include clearfix();
+}
+
+.profile__meta{
+  margin: 15px 0;
+}
+
+.profile__meta-label{
+  text-transform: uppercase;
+  font-size: 12px;
+  color: #8596A8;
+  margin: 0 0 5px 0;
+}
+
+.author-content__bg{
+  background: #fff;
+  border: 2px solid #ECF0F5;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  padding: 15px;
+  -webkit-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.01);
+  -moz-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.01);
+  box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.01);
+}

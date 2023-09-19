@@ -1,0 +1,92 @@
+[
+  {
+    "description": "The bundle",
+    "type": "bundle",
+    "type_category": "bundles",
+    "slug": "main-bundle",
+    "name": "Bundle",
+    "price": "0",
+    "expires_at": 365
+  },
+  {
+    "description": "Job post",
+    "type": "main-product",
+    "slug": "job-post",
+    "type_category": "jobs",
+    "name": "Job post",
+    "price": "190",
+    "expires_in": 60
+  },
+  {
+    "description": "Placement on front page and TOP visual appearance on listing page and front page",
+    "type": "feature-product",
+    "slug": "feature-bundle-highlight",
+    "type_category": "highlight_features",
+    "name": "Highlight",
+    "price": "0",
+    "expires_in": 60
+  },
+  {
+    "description": "Your job listing will appear randomly on the listing page in the top three positions",
+    "type": "feature-product",
+    "slug": "feature-bundle-pre-sort",
+    "type_category": "presort_features",
+    "name": "Top position in listings",
+    "price": "50",
+    "expires_in": 60
+  },
+  {
+    "description": "Your job listing will appear randomly among the Homepage featured job listings",
+    "type": "feature-product",
+    "slug": "feature-bundle-homepage",
+    "type_category": "homepage_features",
+    "name": "Featured on homepage",
+    "price": "50",
+    "expires_in": 60
+  },
+  {
+    "description": "Your job listing will appear randomly on the listing page in the top three positions",
+    "type": "feature-product",
+    "slug": "feature-pre-sort",
+    "type_category": "presort_features",
+    "name": "Top position in listings",
+    "price": "89.99",
+    "expires_in": 10
+  },
+  {
+    "description": "Your job listing will appear randomly among the Homepage featured job listings",
+    "type": "feature-product",
+    "slug": "feature-homepage",
+    "type_category": "homepage_features",
+    "name": "Featured on homepage",
+    "price": "119.99",
+    "expires_in": 10
+  },
+  {
+    "description": "Your job listing will be highlighted with yellow border on the job listings page.",
+    "type": "feature-product",
+    "slug": "feature-highlight-30",
+    "type_category": "highlight_features",
+    "name": "Highlight",
+    "price": "79.99",
+    "expires_in": 30
+  },
+  {
+    "description": "Your job listing will be highlighted with yellow border on the job listings page.",
+    "type": "feature-product",
+    "slug": "feature-highlight",
+    "type_category": "highlight_features",
+    "name": "Highlight",
+    "price": "39.99",
+    "expires_in": 10
+  },
+  {
+    "description": "14 days on the top position of our homepage. Best visibility with the name and logo of your company. Your last added jobs as Quick Links.",
+    "type": "company-product",
+    "slug": "company-highlight",
+    "type_category": "company_features",
+    "name": "Featured company",
+    "price": "199",
+    "expires_in": 14
+  }
+]

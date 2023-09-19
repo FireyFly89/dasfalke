@@ -1,0 +1,23 @@
+@import "../mixins";
+@import "../vars";
+@import "../modules/auth";
+
+.login__lost-pass {
+  margin: 22px 0;
+}
+
+.login__register{
+  margin: 22px 0;
+}
+
+.login__action-btn{
+  display: block;
+  text-align: center;
+  font-size: 16px;
+  font-weight: $dffregular;
+}
+
+.login__register-label{
+  text-align: center;
+  margin: 0 0 15px 0;
+}

@@ -1,0 +1,392 @@
+body{
+  font-family: $dff;
+  font-size: 16px;
+  line-height: $dlh;
+
+  > svg{
+    position: absolute;
+    width: 0;
+    height: 0;
+  }
+
+  &.invert{
+    background: $color__white;
+    
+    .slideout-panel{
+      background: $color__white!important;
+    }
+
+    .content-aside::before{
+      background: #fff!important;
+    }
+  }
+}
+
+svg:not(:root){
+  overflow: hidden;
+}
+
+img:not([src]){
+  visibility: hidden;
+}
+
+img.svg{
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+a{
+  color: $color__eve;
+  font-weight: $dffbold;
+  text-decoration: none;
+}
+
+.br{
+  border-radius: 12px;
+  -webkit-border-radius: 12px;
+}
+
+.site{
+  max-width: 1980px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.site-content{
+  position: relative;
+  z-index: 100;
+}
+
+.col-xs-6{
+  float: left;
+  width: 50%;
+}
+
+.screen-reader-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  word-wrap: normal !important;
+
+  &:focus{
+    background-color: #eee;
+    clip: auto !important;
+    clip-path: none;
+    color: #444;
+    display: block;
+    font-size: 1em;
+    height: auto;
+    left: 5px;
+    line-height: normal;
+    padding: 15px 23px 14px;
+    text-decoration: none;
+    top: 5px;
+    width: auto;
+    z-index: 100000;
+  }
+}
+
+// Helpers
+@media (min-width: $screen-md-min) {
+  .only-mobile {
+    display: none !important;
+  }
+}
+
+@media (max-width: $screen-md) {
+  .only-desktop {
+    display: none !important;
+  }
+}
+
+.job-page__sep{
+  padding: 0;
+  margin: 20px 0;
+  font-size: 0;
+  border: none;
+  height: 1px;
+  background: $color__grey__3;
+}
+
+// Brand
+.brand{
+  position: relative;
+}
+
+.brand-uri{
+  padding: 2px 0;
+  display: block;
+}
+
+.brand-img{
+  width: 120px;
+}
+
+// Container
+.ctn{
+  position: relative;
+  z-index: 20;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  &.auto{
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+
+  &.max{
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1180px;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    @media (min-width: $screen-md-min){
+      width: 80%;
+    }
+  }
+
+  &.narrow{
+    margin: 0 auto;
+    width: 100%;
+    max-width: 666px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  &.blog{
+    margin: 0 auto;
+    width: 100%;
+    max-width: 800px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+// Content flow
+.content-area{
+  @include clearfix();
+  position: relative;
+
+  &.dark-left-sidebar{
+
+    .content-aside{
+
+      &::before{
+        left: -15px;
+        right: -15px;
+        background: $color__white;
+
+        @media (min-width: $screen-md-min){
+          left: -9999px;
+          right: 0;
+        }
+      }
+    }
+  }
+
+  &.light-left-sidebar{
+    .content-aside{
+      &::before{
+        left: -15px;
+        right: -15px;
+        background: #fff;
+
+        @media (min-width: $screen-md-min){
+          left: -9999px;
+          right: 0;
+        }
+      }
+    }
+  }
+}
+
+.content-main{
+
+  &.with-sidebar{
+    @media (min-width: $screen-md-min){
+      position: relative;
+      z-index: 50;
+      float: right;
+      padding-left: 330px;
+      width: 100%;
+    }
+  }
+}
+
+.content-aside{
+  margin: 30px 0 0 0;
+  position: relative;
+  z-index: 100;
+  padding-bottom: 30px;
+
+  @media (min-width: $screen-md-min){
+    float: left;
+    margin: 0 -310px 0 0;
+    width: 310px;
+  }
+
+  &::before{
+    content: '';
+    position: absolute;
+    z-index: 50;
+    top: 0;
+    bottom: 0;
+
+    @media (min-width: $screen-md-min){
+      top: -9999px;
+      bottom: -9999px;
+    }
+  }
+}
+
+.content-aside-inner{
+  position: relative;
+  z-index: 100;
+}
+
+main,
+aside{
+  padding: 20px 0;
+}
+
+.entry-content{
+  @include clearfix;
+  line-height: 1.5;
+
+  img{
+    margin: 0 0 1.5em 0;
+    height: auto;
+    max-width: 100%;
+    display: block;
+  }
+
+  p{
+    margin: 0 0 15px;
+  }
+
+  blockquote{
+    border-left: 5px solid $color__dark;
+    margin: 20px 0;
+    padding: 1em 40px;
+
+    p{
+      margin: 0;
+    }
+  } 
+
+  a{
+    text-decoration: none;
+  }
+}
+
+.entry-title,
+.page-title{
+  margin: 0 0 30px 0;
+  font-size: 18px;
+}
+
+.shd{
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.15);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.15);
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.15);
+}
+
+.wc-credit-card-form-card-number,
+.wc-credit-card-form-card-expiry,
+.wc-credit-card-form-card-cvc {
+  font-size: 1.5em;
+  padding: 8px;
+  background-repeat: no-repeat;
+  background-position: right 0.618em center;
+  background-size: 32px 20px;
+
+  &.visa {
+    background-image: url( $template__baseurl + '/wp-content/plugins/woocommerce/assets/images/icons/credit-cards/visa.svg');
+  }
+
+  &.mastercard {
+    background-image: url( $template__baseurl + '/wp-content/plugins/woocommerce/assets/images/icons/credit-cards/mastercard.svg');
+  }
+
+  &.laser {
+    background-image: url( $template__baseurl + 'wp-content/plugins/woocommerce/assets/images/icons/credit-cards/laser.svg');
+  }
+
+  &.dinersclub {
+    background-image: url( $template__baseurl + 'wp-content/plugins/woocommerce/assets/images/icons/credit-cards/diners.svg');
+  }
+
+  &.maestro {
+    background-image: url( $template__baseurl + 'wp-content/plugins/woocommerce/assets/images/icons/credit-cards/maestro.svg');
+  }
+
+  &.jcb {
+    background-image: url( $template__baseurl + 'wp-content/plugins/woocommerce/assets/images/icons/credit-cards/jcb.svg');
+  }
+
+  &.amex {
+    background-image: url( $template__baseurl + 'wp-content/plugins/woocommerce/assets/images/icons/credit-cards/amex.svg');
+  }
+
+  &.discover {
+    background-image: url( $template__baseurl + 'wp-content/plugins/woocommerce/assets/images/icons/credit-cards/discover.svg');
+  }
+
+  &.paypal {
+    background-image: url( $template__baseurl + 'wp-content/themes/eve-falke/img/paypal.svg');
+  }
+
+  &.sofort {
+    background-image: url( $template__baseurl + 'wp-content/themes/eve-falke/img/sofort.svg');
+  }
+}
+
+.submit-wrap__card-icon{
+  width: 32px;
+  height: 20px;
+  padding: 0;
+  margin: 0 10px 10px 0;
+  display: inline-block;
+  background-position: center center;
+}
+
+.page-template-page-checkout{
+
+  .woocommerce{
+  
+    .order_details{
+      list-style-type: none;
+      background: #fff;
+      padding: 15px;
+      border: 1px solid #e1e1e9;
+      border-radius: 6px;
+    }
+
+    .wc-forward{
+      color: white;
+      border-color: #3E76EB;
+      background: #3E76EB;
+      box-shadow: 0 3px 6px rgba(62,118,235,0.3);
+      display: inline-block;
+      padding: 8px 35px;
+      text-decoration: none;
+      line-height: 1;
+      font-weight: 700;
+      font-size: 12px;
+      text-align: center;
+      -webkit-border-radius: 14px;
+      border-radius: 14px;
+      text-transform: uppercase;
+      outline: none;
+      transition: all ease-out .33s;
+    }
+  }
+}

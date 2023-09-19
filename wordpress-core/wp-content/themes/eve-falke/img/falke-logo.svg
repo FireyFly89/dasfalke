@@ -1,0 +1,23 @@
+<svg id="Réteg_1" data-name="Réteg 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 119.2 20">
+  <defs>
+    <style>
+      .falke-logo-1{fill:#2f343c;}
+      .falke-logo-2{fill:#e2a338;}
+      .falke-logo-3{fill:#e3495b;}
+    </style>
+  </defs>
+  <g id="logo">
+    <g id="Group_426" data-name="Group 426">
+      <path id="Path_237" data-name="Path 237" class="falke-logo-1" d="M762.88,1029.35v-10h7.23v2.39h-4.33v1.67h3.53v2.23h-3.53v3.71Z" transform="translate(-708.99 -1014)"/>
+      <path id="Path_238" data-name="Path 238" class="falke-logo-1" d="M778.62,1019.35h2.63l3.65,10H782l-.64-2h-2.8l-.62,2H775Zm2.25,6.21-.93-3.1-1,3.1Z" transform="translate(-708.99 -1014)"/>
+      <path id="Path_239" data-name="Path 239" class="falke-logo-1" d="M791.11,1029.35v-10H794v7.6h4.77v2.4Z" transform="translate(-708.99 -1014)"/>
+      <path id="Path_240" data-name="Path 240" class="falke-logo-1" d="M805.13,1029.35v-10H808v3.8l3.2-3.8h3.26l-3.83,4.48,4.1,5.52h-3.33l-2.61-3.68-.8.79v2.89Z" transform="translate(-708.99 -1014)"/>
+      <path id="Path_241" data-name="Path 241" class="falke-logo-1" d="M828.2,1027v2.4h-7.5v-10h7.36v2.39h-4.47v1.41h3.82v2.23h-3.82V1027Z" transform="translate(-708.99 -1014)"/>
+    </g>
+    <g id="Group_431" data-name="Group 431">
+      <path id="Path_243" data-name="Path 243" class="falke-logo-2" d="M736.4,1028.6l15.74-14.6h-7.89l-11.8,10.94Z" transform="translate(-708.99 -1014)"/>
+      <path id="Path_244" data-name="Path 244" class="falke-logo-3" d="M726.69,1023.09h0l-9.8-9.09H709l21.57,20h0l4-3.66Z" transform="translate(-708.99 -1014)"/>
+      <path id="Path_245" data-name="Path 245" class="falke-logo-2" d="M732.14,1014l-5.74,5.33,3.94,3.66,9.7-9Z" transform="translate(-708.99 -1014)"/>
+    </g>
+  </g>
+</svg>

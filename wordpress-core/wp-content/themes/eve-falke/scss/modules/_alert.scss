@@ -1,0 +1,107 @@
+.alert-message {
+  width: 100%;
+  border-radius: 6px;
+  padding: 15px;
+  margin-bottom: 10px;
+
+  h2 {
+    margin: 0 0 5px;
+    font-size: 18px;
+
+    .svg {
+      width: 16px;
+      height: 16px;
+      margin-right: 5px;
+    }
+  }
+
+  p {
+    margin: 0 0 0 25px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  &.success {
+    background-color: $color__as__bg;
+
+    h2 {
+      color: $color__as__title;
+    }
+
+    p {
+      color: $color__as__text;
+    }
+  }
+
+  &.error {
+    background-color: $color__err__bg;
+
+    h2 {
+      color: $color__err__title;
+    }
+
+    p {
+      color: $color__err__text;
+    }
+  }
+
+  &.warning {
+    background-color: $color__war__bg;
+
+    h2 {
+      color: $color__war__title;
+    }
+
+    p {
+      color: $color__war__text;
+    }
+  }
+}
+
+.woocommerce {
+  &-error,
+  &-warning,
+  &-success {
+    position: relative;
+    margin: 0;
+    padding: 10px 25px;
+    z-index: 130;
+    list-style-type: none;
+    text-align: center;
+    -webkit-animation: fadeIn 300ms forwards;
+    animation: fadeIn 300ms both;
+  }
+
+  &-error {
+    background-color: $color__err__bg;
+    color: $color__err__text;
+  }
+
+  &-success {
+    background-color: $color__as__bg;
+    color: $color__as__text;
+  }
+
+  &-warning {
+    background-color: $color__war__bg;
+    color: $color__war__text;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

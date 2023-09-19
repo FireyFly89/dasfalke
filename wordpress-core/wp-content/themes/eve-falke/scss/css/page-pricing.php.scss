@@ -1,0 +1,243 @@
+@import "../mixins";
+@import "../vars";
+
+.pricing{
+  padding: 50px 0;
+}
+
+.product-wrapper {
+  max-width: 450px;
+  margin: 0px auto;
+
+  > h1 {
+    font-size: 24px;
+    text-align: center;
+    max-width: 380px;
+    margin: 0 auto 20px auto;
+  }
+
+  .price {
+    color: $color__eve;
+    font-size: 50px;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+
+  .price-posts {
+    font-size: 20px;
+    text-align: center;
+    color: $color__dark;
+    font-weight: $dffbold;
+    padding-bottom: 52px;
+
+    > .grey {
+      color: $color__grey;
+      font-weight: $dffregular;
+    }
+  }
+
+  .price-group-label {
+    display: block;
+    text-align: center;
+    margin: 0 0 15px 0;
+    font-size: 14px;
+    color: $color__grey__2;
+    font-weight: $dffbold;
+  }
+
+  .price-size {
+    text-align: center;
+    padding-bottom: 40px;
+
+    .price-input-wrap {
+      background-color: #fff;
+      border: 2px solid #fff;
+      width: 336px;
+      margin: 0 auto;
+      -webkit-border-radius: 12px;
+      border-radius: 12px;
+      overflow: hidden;
+      @include flexbox();
+    }
+
+    input[type=number]::-webkit-outer-spin-button,
+    input[type=number]::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    .product-quantity {
+      -moz-appearance: textfield;
+      background-color: #FFFFFF;
+      height: 50px;
+      width: 220px;
+      padding: 0;
+      border: none;
+      -webkit-border-radius: 0;
+      border-radius: 0;
+      text-align: center;
+      font-size: 18px;
+      font-weight: $dffbold;
+      color: #000000;
+      outline: none;
+      @include flexbox();
+      @include flex(1 1 auto);
+    }
+
+    input[type=button] {
+      padding: 0px;
+      width: 50px;
+      height: 50px;
+      background-color: $color__grey__3;
+      border: 0 none;
+      cursor: pointer;
+      font-weight: $dffbold;
+      font-size: 30px;
+      outline: none;
+      justify-content: center;
+      @include flexbox();
+      @include flex(1 1 auto);
+      @include transition();
+
+      &:hover {
+        background-color: $color__grey__4;
+        -webkit-transform: none;
+        transform: none;
+      }
+
+      &.button-minus {
+        border-bottom-left-radius: 5px;
+        border-top-left-radius: 5px;
+      }
+
+      &.button-plus {
+        border-bottom-right-radius: 5px;
+        border-top-right-radius: 5px;
+      }
+    }
+  }
+
+  .price-options {
+    text-align: center;
+
+    .price-list {
+      text-align: left;
+      width: 336px;
+      margin: 0 auto;
+
+      .price-list-item {
+        background-color: #fff;
+        margin-bottom: 7px;
+        position: relative;
+        -webkit-border-radius: 6px;
+        border-radius: 6px;
+
+        .onoffswitch,
+        .i-green-ok {
+          fill: #93E299;
+          position: absolute;
+          right: 15px;
+          top: 15px;
+        }
+
+        .ios-toggle-wrap {
+          width: 56px;
+        }
+
+        > label {
+          padding: 10px 10px 10px 10px;
+          display: block;
+          font-size: 14px;
+          width: 270px;
+        }
+
+        .price-more-wrap {
+          @include clearfix();
+          padding: 0 10px 10px 10px;
+
+          a {
+            font-size: 12px;
+            font-weight: $dffbold;
+          }
+        }
+      }
+    }
+  }
+
+  .submit-wrap {
+    text-align: center;
+    padding-top: 50px;
+
+    input {
+      font-size: 14px;
+      font-weight: $dffbold;
+      padding: 10px 30px;
+    }
+  }
+
+}
+
+.price_ill{
+  margin: 0 0 50px 0;
+}
+
+.price_ill-img-psn{
+  position: relative;
+  padding: 0 0 73.33% 0;
+}
+
+.price_ill-img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+} 
+
+.price_ill-title{
+  margin: 20px 0;
+  font-size: 22px;
+  padding: 0 24px;
+}
+
+.price_ill-desc{
+  color: #959FAA;
+  font-size: 16px;
+  padding: 0 24px;
+}
+
+.price-list-item__info{
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 0;
+
+  &:hover{
+    .price-list-item__info-content{
+      display: block;
+    }
+  }
+
+  .i{
+    fill: $color__grey__5;
+    width: 16px;
+    height: 16px;
+  }
+}
+
+.price-list-item__info-content{
+  position: absolute;
+  display: none;
+  padding: 15px;
+  font-size: 14px;
+  bottom: 100%;
+  left: -142px;
+  z-index: 9999;
+  width: 300px;
+  margin: 0 0 20px 0;
+  background: $color__eve;
+  color: #fff;
+  -webkit-border-radius: 12px;
+  border-radius: 12px;
+}
